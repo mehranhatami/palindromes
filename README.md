@@ -1,6 +1,7 @@
 # palindromes
 
-[![Build Status](https://secure.travis-ci.org/user/palindromes.png?branch=master)](http://travis-ci.org/user/palindromes)
+[![Build Status](https://secure.travis-ci.org/mehranhatami/palindromes.png?branch=master)](http://travis-ci.org/mehranhatami/palindromes)
+[![Code Climate](https://codeclimate.com/github/mehranhatami/palindromes/badges/gpa.svg)](https://codeclimate.com/github/mehranhatami/palindromes)
 
 
 ## Installation
