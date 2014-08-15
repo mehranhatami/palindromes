@@ -29,7 +29,7 @@ module.exports = function (config) {
     reporters: ['progress', 'coverage'],
 
     preprocessors: {
-      'modules/*js': 'coverage'
+      'palindromes.js': 'coverage'
     },
     coverageReporter: {
       type: 'lcov',
