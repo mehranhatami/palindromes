@@ -1,7 +1,7 @@
 {
   "name": "palindromes",
-  "description": "",
-  "version": "0.0.0",
+  "description": "A JavaScript module to calculate string in order to find palindromes",
+  "version": "0.0.1",
   "main": "palindromes.js",
   "ignore": [
     "test",
