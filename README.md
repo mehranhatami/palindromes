@@ -53,6 +53,12 @@ To run the tests in Firefox, just once, as CI would:
 npm test
 ```
 
+To run the tests for your desired browser (any of Chrome, Firefox, Opera, IE):
+
+```
+karma start --browsers BrowserName --single-run
+```
+
 
 ## Browser support
 
