@@ -4,6 +4,7 @@
 
   var expect = chai.expect,
     mockResult,
+    mockResult2,
     sampleStr = '123321',
     sampleResult;
 
@@ -24,7 +25,8 @@
       expect(palindromes).to.be.a('function');
     });
 
-    mockResult = global.__mockResult__;
+    mockResult = global.__mockResult__,
+    mockResult2 = global.__mockResult2__;
 
     it('Check if palindromes.Palindrome is a class-like function!', function () {
 
@@ -62,10 +64,11 @@
 
     });
 
-    if (mockResult) {
+
+    function mockResultTest(mockObject) {
       describe('Check if palindromes function is working as it should be!', function () {
         var Palindrome = palindromes.Palindrome,
-          result = palindromes(mockResult.str, mockResult.count),
+          result = palindromes(mockObject.str, mockObject.count),
           len = result.length;
 
         it('Check if the test result passes the functionality test-cases!', function () {
@@ -74,7 +77,7 @@
 
           expect(result).is.an('array');
 
-          expect(result).to.have.length.below(mockResult.count + 1);
+          expect(result).to.have.length.below(mockObject.count + 1);
 
           for (; i < len; i += 1) {
             expect(result[i]).to.be.an.instanceof(Palindrome);
@@ -84,11 +87,17 @@
 
         it('Compare the output with the predicted result defined in mock/result.js', function () {
 
-          expect(result).to.deep.equal(mockResult.result);
+          expect(result).to.deep.equal(mockObject.result);
 
         });
 
       });
+    }
+    if (mockResult) {
+      mockResultTest(mockResult);
+    }
+    if (mockResult2) {
+      mockResultTest(mockResult2);
     }
   });
 

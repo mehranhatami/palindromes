@@ -26,5 +26,31 @@
     }]
   };
 
+  global.__mockResult2__ = {
+    str: 'sqrrqabccbatudefggfedvwhijkllkjihxymnnmzpop',
+    count: 8,
+    result: [{
+      'text': 'hijkllkjih',
+      'length': 10,
+      'index': 23
+    }, {
+      'text': 'defggfed',
+      'length': 8,
+      'index': 13
+    }, {
+      'text': 'abccba',
+      'length': 6,
+      'index': 5
+    }, {
+      'text': 'qrrq',
+      'length': 4,
+      'index': 1
+    }, {
+      'text': 'pop',
+      'length': 3,
+      'index': 40
+    }]
+  };
+
   String.prototype.trim = null;
 }(this));
