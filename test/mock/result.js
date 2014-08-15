@@ -1,7 +1,5 @@
 (function (global) {
   'use strict';
-  var palindromes = global.palindromes;
-
   /*
     For example, the output for string, "sqrrqabccbatudefggfedvwhijkllkjihxymnnmzpop" should be:
 
@@ -10,23 +8,23 @@
     Text: abccba, Index: 5, Length: 6
   */
 
-  if (typeof (palindromes) === 'function') {
-    palindromes.mockResult = {
-      str: 'sqrrqabccbatudefggfedvwhijkllkjihxymnnmzpop',
-      count: 3,
-      result: [{
-        'text': 'hijkllkjih',
-        'length': 10,
-        'index': 23
-      }, {
-        'text': 'defggfed',
-        'length': 8,
-        'index': 13
-      }, {
-        'text': 'abccba',
-        'length': 6,
-        'index': 5
-      }]
-    };
-  }
+  global.__mockResult__ = {
+    str: 'sqrrqabccbatudefggfedvwhijkllkjihxymnnmzpop',
+    count: 3,
+    result: [{
+      'text': 'hijkllkjih',
+      'length': 10,
+      'index': 23
+    }, {
+      'text': 'defggfed',
+      'length': 8,
+      'index': 13
+    }, {
+      'text': 'abccba',
+      'length': 6,
+      'index': 5
+    }]
+  };
+
+  String.prototype.trim = null;
 }(this));

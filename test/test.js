@@ -1,4 +1,4 @@
-(function () {
+(function (global) {
 
   'use strict';
 
@@ -7,12 +7,24 @@
     sampleStr = '123321',
     sampleResult;
 
+  describe('Check if trim polyfill works!', function () {
+    it('trim left', function () {
+      expect(' abc'.trim()).to.equal('abc');
+    });
+    it('trim right', function () {
+      expect('abc '.trim()).to.equal('abc');
+    });
+    it('trim', function () {
+      expect(' abc '.trim()).to.equal('abc');
+    });
+  });
+
   describe('palindromes()', function () {
     it('Check if palindromes function exists!', function () {
       expect(palindromes).to.be.a('function');
     });
 
-    mockResult = palindromes.mockResult;
+    mockResult = global.__mockResult__;
 
     it('Check if palindromes.Palindrome is a class-like function!', function () {
 
@@ -80,4 +92,4 @@
     }
   });
 
-}());
+}(this));
