@@ -25,7 +25,16 @@ module.exports = function (config) {
     // use dots reporter, as travis terminal does not support escaping sequences
     // possible values: 'dots', 'progress', 'junit', 'teamcity'
     // CLI --reporters progress
-    reporters: ['dots'],
+    //reporters: ['dots'],
+    reporters: ['progress', 'coverage'],
+
+    preprocessors: {
+      'modules/*js': 'coverage'
+    },
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/'
+    },
 
     // enable / disable watching file and executing tests whenever any file changes
     // CLI --auto-watch --no-auto-watch
@@ -56,7 +65,8 @@ module.exports = function (config) {
       'karma-firefox-launcher',
       'karma-ie-launcher',
       'karma-safari-launcher',
-      'karma-opera-launcher'
+      'karma-opera-launcher',
+      'karma-coverage'
     ]
   });
 };
