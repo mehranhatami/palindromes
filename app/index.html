@@ -1,0 +1,103 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A JavaScript module to calculate string in order to find palindromes</title>
+    <!-- build:css vendor/bootstrap/css/bootstrap.min.css -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- /build -->
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  </head>
+  <body>
+    
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#home">Palindromes</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+      <div id="content" class="container">
+      </div>
+      
+      <div id="templates">
+
+      <div class="jumbotron" name="about">
+        <p>
+        <a href="http://stackoverflow.com/users/2877719/mehran-hatami">
+          <img src="http://stackoverflow.com/users/flair/2877719.png" width="208" height="58" alt="profile for Mehran Hatami at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Mehran Hatami at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+        </a>
+        </p>
+        <p>
+        Email address: <a href="mailto:mehranhatamie@gmail.com">mehranhatamie@gmail.com</a>
+        </p>
+        <p>
+        Twitter: <a href="https://twitter.com/fixjs">@fixjs</a>
+        </p>
+        <p>
+        <a href="http://no.linkedin.com/in/mehranhatami" rel="nofollow">
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" alt="View Mehran Hatami's profile on LinkedIn" title="View Mehran Hatami's profile on LinkedIn">
+        </a>
+        </p>
+      </div>
+
+
+      <div class="jumbotron" name="home">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <span class="input-group-addon">@String</span>
+              <input name="baseString" type="text" class="form-control" value="sqrrqabccbatudefggfedvwhijkllkjihxymnnmzpop" placeholder="1" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="input-group">
+              <span class="input-group-addon">@Count</span>
+              <input name="count" type="text" class="form-control" value="3" placeholder="Count" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          
+          <div class="col-lg-12">
+            <div class="input-group">
+              <a class="btn btn-default btn-lg btn-calculate" role="button">Find Palindromes</a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="result">
+          
+        </div>
+      </div>
+
+      <div class="palindromes" name="palindromes">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-info active">
+            <h4 class="list-group-item-heading">Not Found</h4>
+            <p class="list-group-item-text">...</p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+      <script data-main="config" src="bower_components/requirejs/require.js"></script>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+  </html>
