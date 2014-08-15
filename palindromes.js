@@ -19,8 +19,17 @@
     }
 
     function find(baseStr, maxlen) {
-      if (baseStr === null || baseStr === '') {
-        return '';
+
+      if (typeof baseStr !== 'string' || baseStr === '' || maxlen < 2) {
+        return null;
+      }
+
+      if (typeof maxlen !== 'number') {
+        maxlen = baseStr.length;
+      }
+
+      if (maxlen < 2) {
+        return null;
       }
 
       var
@@ -125,6 +134,7 @@
       return result;
     }
 
+    palindromes.find = find;
     palindromes.Palindrome = Palindrome;
     /**
      * Expose palindromes

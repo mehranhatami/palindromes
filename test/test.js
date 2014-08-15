@@ -3,7 +3,9 @@
   'use strict';
 
   var expect = chai.expect,
-    mockResult;
+    mockResult,
+    sampleStr = '123321',
+    sampleResult;
 
   describe('palindromes()', function () {
     it('Check if palindromes function exists!', function () {
@@ -13,7 +15,6 @@
     mockResult = palindromes.mockResult;
 
     it('Check if palindromes.Palindrome is a class-like function!', function () {
-      var sampleStr = '123321';
 
       expect(palindromes.Palindrome).to.be.a('function');
 
@@ -22,6 +23,30 @@
           palindrome.length === sampleStr.length &&
           palindrome.index === 30);
       });
+
+    });
+
+    it('Check if palindromes.find works as it should be!', function () {
+
+      expect(palindromes.find).to.be.a('function');
+
+      sampleResult = palindromes.find(sampleStr);
+
+      expect(sampleResult).to.be.an.instanceof(palindromes.Palindrome);
+      expect(sampleResult.text).to.be.equal(sampleStr);
+      expect(sampleResult.index).to.equal(0);
+
+      sampleResult = palindromes.find(sampleStr, 1);
+
+      expect(sampleResult).to.be.null;
+
+      sampleResult = palindromes.find(null);
+
+      expect(sampleResult).to.be.null;
+
+      sampleResult = palindromes.find('');
+
+      expect(sampleResult).to.be.null;
 
     });
 
