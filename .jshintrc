@@ -2,7 +2,6 @@
     "indent": 2,
     "browser": true,
     "node": true,
-    "es5": true,
     "esnext": true,
     "bitwise": false,
     "curly": false,
