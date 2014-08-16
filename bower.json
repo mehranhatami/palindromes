@@ -18,13 +18,11 @@
     "bower_components",
     "dist"
   ],
-  "dependencies": {
+  "devDependencies": {
+    "chai": "*",
     "requirejs": "*",
     "jquery": "*",
     "bootstrap": "*"
-  },
-  "devDependencies": {
-    "chai": "*"
   },
   "homepage": "https://github.com/mehranhatami/palindromes",
   "authors": [
