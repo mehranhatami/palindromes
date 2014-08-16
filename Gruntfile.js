@@ -8,13 +8,13 @@ module.exports = function (grunt) {
     jshint: {
       app: {
         options: {
-          jshintrc: 'app/.jshintrc'
+          jshintrc: '.jshintrc'
         },
         src: ['app/**/*.js']
       },
       test: {
         options: {
-          jshintrc: 'test/.jshintrc'
+          jshintrc: '.jshintrc'
         },
         src: ['test/**/*.js']
       },
@@ -93,9 +93,18 @@ module.exports = function (grunt) {
           cwd: '',
           dest: 'dist/modules',
           src: [
+            'palindromes.min.js',
             'palindromes.js'
           ]
         }]
+      }
+    },
+
+    uglify: {
+      dist: {
+        files: {
+          'palindromes.min.js': ['palindromes.js']
+        }
       }
     },
 
@@ -116,13 +125,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-karma-coveralls');
 
   // Default task.
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['uglify:dist', 'jshint']);
 
-  grunt.registerTask('build', ['copy:dist']);
+  grunt.registerTask('build', ['uglify:dist', 'copy:dist']);
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
