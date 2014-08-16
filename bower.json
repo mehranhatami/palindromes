@@ -9,7 +9,11 @@
     ".travis.yml",
     "CHANGELOG.md",
     "karma.conf.js",
-    "package.json"
+    "package.json",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
   ],
   "dependencies": {
     "requirejs": "*",
@@ -18,5 +22,18 @@
   },
   "devDependencies": {
     "chai": "*"
-  }
+  },
+  "homepage": "https://github.com/mehranhatami/palindromes",
+  "authors": [
+    "Mehran Hatami <mehranhatamie@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "JavaScript",
+    "palindrome"
+  ],
+  "license": "MIT"
 }
