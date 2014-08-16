@@ -2,9 +2,10 @@
   "name": "palindromes",
   "description": "A JavaScript module to calculate string in order to find palindromes",
   "version": "0.0.1",
+  "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/mehranhatami/palindromes"
+    "url": "git://github.com/mehranhatami/palindromes.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
