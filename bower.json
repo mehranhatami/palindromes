@@ -5,15 +5,18 @@
   "main": "palindromes.js",
   "ignore": [
     "test",
+    "app",
+    "coverage",
+    "*.md",
     ".jshintrc",
     ".travis.yml",
-    "CHANGELOG.md",
     "karma.conf.js",
+    "Gruntfile.js",
     "package.json",
     "**/.*",
     "node_modules",
     "bower_components",
-    "tests"
+    "dist"
   ],
   "dependencies": {
     "requirejs": "*",
